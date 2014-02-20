@@ -1,0 +1,1 @@
+"src/launcher.ts" --sourcemap --removeComments --target ES5 --module amd --outDir src
