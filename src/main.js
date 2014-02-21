@@ -1,11 +1,6 @@
 require.config({
-    baseUrl: './',
-
-    paths: {
-		Ability: '../src/Ability',
-    }
-
+    baseUrl: './'
 });
 
-require(['js/abilities', 'js/cards']);
+require(['Game']);
 //# sourceMappingURL=main.js.map

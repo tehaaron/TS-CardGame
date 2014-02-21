@@ -14,7 +14,5 @@ class A1Bot extends Card {
 	    	, 2
 	    	, 0
 		);
-	
-	     // Content
 	}
-}
+} export = A1Bot;

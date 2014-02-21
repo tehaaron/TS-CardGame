@@ -18,4 +18,4 @@ class NoviceSniper extends Card {
 	    	, []
 		);
 	}
-}
+} export = NoviceSniper;

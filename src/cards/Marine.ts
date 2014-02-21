@@ -15,4 +15,4 @@ class Marine extends Card {
 	    	, 0
 		);
 	}
-}
+} export = Marine;

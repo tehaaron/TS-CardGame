@@ -17,4 +17,4 @@ class Sectoid extends Card {
 	
 	     // Content
 	}
-}
+} export = Sectoid;
