@@ -1,7 +1,7 @@
-import Ability = require('../src/Ability');
+import Ability = require('../Ability');
 
 class Snipe extends Ability {
-	Damage: number;
+	damage: number;
 	
 	constructor(damage:number) {
 		this.damage = 1;
@@ -10,8 +10,8 @@ class Snipe extends Ability {
 	    	, true //disabled until card wait is over
 	    );
 	
-	    action() {
+/*	    action() {
 	    	//attack animation including targetting logic
-	    };
+	    } */
 	}
 }

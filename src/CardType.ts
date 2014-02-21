@@ -1,1 +1,1 @@
-export enum CardType { Ground, Air, Water, Structure, Command};
+export enum CardType { Ground, Air, Water, Structure, Command}

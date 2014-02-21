@@ -1,0 +1,1 @@
+{"version":3,"file":"Ability.js","sourceRoot":"","sources":["../Ability.ts"],"names":["Ability","Ability.constructor","Ability.action"],"mappings":"AAAA;IAAA;QAICA,iBAAYA,IAAWA,EAAEA,UAAkBA;YAC1CC,IAAIA,CAACA,IAAIA,GAAGA,IAAIA;YAChBA,IAAIA,CAACA,UAAUA,GAAGA,UAAUA;QAC7BA,CAACA;QAEDD,2BAAAA;QAEAE,CAACA;QAEFF,eAACA;IAADA,CAACA,IAAA;;;GAAkB"}

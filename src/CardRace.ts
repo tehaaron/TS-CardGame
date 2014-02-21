@@ -1,1 +1,1 @@
-export enum CardRace { Human, Alien, Robot };
+export enum CardRace { Human, Alien, Robot }

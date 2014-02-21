@@ -1,1 +1,1 @@
-export enum CardRarity { Common, Standout, Exquisite, Diety };
+export enum CardRarity { Common, Standout, Exquisite, Diety }

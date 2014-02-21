@@ -1,12 +1,14 @@
 class Ability {
-	Name: string;
-	IsDisabled: boolean;
+	name: string;
+	isDisabled: boolean;
 
 	constructor(name:string, isDisabled:boolean) {
-		this.Name = name;
-		this.IsDisabled = isDisabled;
+		this.name = name;
+		this.isDisabled = isDisabled;
 	}
 
-	action();
+	action() {
+
+	}
 
 } export = Ability;

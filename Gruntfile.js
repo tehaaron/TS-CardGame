@@ -14,7 +14,7 @@ module.exports = function (grunt) {
 			dev: {
 				src: ["src/**/*.ts"],
 				watch: 'src',
-				outDir: 'src'
+				outDir: 'src/js'
 			}
 		},
 	});

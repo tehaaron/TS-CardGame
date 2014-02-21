@@ -1,7 +1,7 @@
-import Ability = require('../src/Ability');
+import Ability = require('../Ability');
 
 class Armor extends Ability {
-	ArmorValue: number;
+	armorValue: number;
 	
 	constructor(armorValue:number) {
 		this.armorValue = 1;
@@ -10,8 +10,8 @@ class Armor extends Ability {
 	    	, true
 	    );
 	
-	    action() {
+/*	    action() {
 	    	//defense animation, the application of armor should probably be checked for during opponent's attack
-	    };
+	    }*/
 	}
 }

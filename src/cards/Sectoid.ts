@@ -1,15 +1,15 @@
-import Card = require('../src/Card');
-import CardRace = require('../src/CardRace');
-import CardRarity = require('../src/CardRarity');
-import CardType = require('../src/CardType');
+import Card = require('../Card');
+import Race = require('../CardRace');
+import Rarity = require('../CardRarity');
+import Type = require('../CardType');
 
 class Sectoid extends Card {
 	constructor() {
 	    super(
 	    	'Sectoid'
-	    	, CardType.Ground
-	    	, CardRace.Alien
-	    	, CardRarity.Common
+	    	, Type.CardType.Ground
+	    	, Race.CardRace.Alien
+	    	, Rarity.CardRarity.Common
 	    	, 1
 	    	, 3
 	    	, 1

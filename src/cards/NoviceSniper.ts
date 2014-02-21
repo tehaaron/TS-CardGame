@@ -1,21 +1,21 @@
-import Card = require('../src/Card');
-import CardRace = require('../src/CardRace');
-import CardRarity = require('../src/CardRarity');
-import CardType = require('../src/CardType');
-import Ability = require('../src/Ability');
-import Snipe = require('../src/abilities/Snipe');
+import Card = require('../Card');
+import Race = require('../CardRace');
+import Rarity = require('../CardRarity');
+import Type = require('../CardType');
+import Ability = require('../Ability');
+import Snipe = require('../abilities/Snipe');
 
 class NoviceSniper extends Card {
 	constructor() {
 	    super(
 	    	'Novice Sniper'
-	    	, CardType.Ground
-	    	, CardRace.Human
-	    	, CardRarity.Common
+	    	, Type.CardType.Ground
+	    	, Race.CardRace.Human
+	    	, Rarity.CardRarity.Common
 	    	, 1
 	    	, 1
 	    	, 0
-	    	, [Snipe]
+	    	, []
 		);
 	}
 }

@@ -1,42 +1,42 @@
-import CardRace = require('../src/CardRace');
-import CardRarity = require('../src/CardRarity');
-import CardType = require('../src/CardType');
+import Race = require('../src/CardRace');
+import Rarity = require('../src/CardRarity');
+import Type = require('../src/CardType');
 import Ability = require('../src/Ability');
 
 class Card {
-	Name: string;
-	Type: CardType;
-	Race: CardRace;
-	Rarity: CardRarity;
-	Health: number;
-	Damage: number;
-	Wait: number;
-	Image: string;
-	Abilities: Ability[];
+	name: string;
+	type: Type.CardType;
+	race: Race.CardRace;
+	rarity: Rarity.CardRarity;
+	health: number;
+	damage: number;
+	wait: number;
+	image: string;
+	abilities: Ability[];
 
-	constructor(name: string, type: CardType, race:CardRace, rarity:CardRarity, health:number, damage:number, wait:number, abilities?:Ability[], image?:string) {
-		this.Name = name;
-		this.Type = cardType;
-		this.Race = cardRace;
-		this.Rarity = cardRarity;
-		this.Health = hp;
-		this.Damage = damage;
-		this.Wait = wait;
-		this.Abilities = abilities;
-		this.Image = imageLocation;
+	constructor(name:string, type:Type.CardType, race:Race.CardRace, rarity:Rarity.CardRarity, health:number, damage:number, wait:number, abilities?:Ability[], image?:string) {
+		this.name = name;
+		this.type = type;
+		this.race = race;
+		this.rarity = rarity;
+		this.health = health;
+		this.damage = damage;
+		this.wait = wait;
+		this.abilities = abilities;
+		this.image = image;
 	}
 
 	isDead() {
-		if(health < 1) {
-			this.dispose();
+		if(this.health < 1) {
+			this.remove();
 		} return false;
-	};
+	}
 
 	remove() {
 		//remove the card from the table
-	};
+	}
 
 	attack() {
 		//attack animation
-	};
+	}
 } export = Card;

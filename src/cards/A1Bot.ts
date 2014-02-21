@@ -3,16 +3,18 @@ import Race = require('../CardRace');
 import Rarity = require('../CardRarity');
 import Type = require('../CardType');
 
-class Marine extends Card {
+class A1Bot extends Card {
 	constructor() {
 	    super(
-	    	'Marine'
+	    	'1A Bot'
 	    	, Type.CardType.Ground
-	    	, Race.CardRace.Human
+	    	, Race.CardRace.Robot
 	    	, Rarity.CardRarity.Common
-	    	, 3
-	    	, 1
+	    	, 2
+	    	, 2
 	    	, 0
 		);
+	
+	     // Content
 	}
 }
