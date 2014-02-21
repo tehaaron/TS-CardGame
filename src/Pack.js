@@ -17,6 +17,8 @@ define(["require", "exports", '../src/Card', '../src/cards/Marine', '../src/card
                 this.pack.push(new NoviceSniper());
             }
             ;
+
+            return this.pack;
         };
         return Pack;
     })();

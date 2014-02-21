@@ -1,3 +1,6 @@
-define(["require", "exports", '../src/Card', '../src/Ability', '../src/Pack'], function(require, exports, Card, Ability, Pack) {
+define(["require", "exports", '../src/Pack'], function(require, exports, Pack) {
+    var test = new Pack;
+
+    console.log(test);
 });
 //# sourceMappingURL=Game.js.map

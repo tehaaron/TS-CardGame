@@ -23,5 +23,7 @@ class Pack {
 		for (var i = 0; i < 5; i += 1) {
 			this.pack.push(new NoviceSniper());
 		};
+
+		return this.pack;
 	}
 } export = Pack;
