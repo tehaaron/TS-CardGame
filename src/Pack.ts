@@ -11,6 +11,7 @@ class Pack {
 		this.pack = [];
 
 		this.createPack();	
+		this.shuffle();
 	}
 
 	createPack() {
@@ -24,6 +25,20 @@ class Pack {
 			this.pack.push(new NoviceSniper());
 		};
 
-		return this.pack;
 	}
+
+	shuffle() {
+		var n = 8;
+		var i, j, k;
+		var temp;
+		for (i = 0; i < n; i += 1 ) {
+			for (j = 0; j < this.pack.length; j += 1) {
+				k = Math.floor(Math.random() * this.pack.length);
+				temp = this.pack[j];
+				this.pack[j] = this.pack[k];
+				this.pack[k] = temp; 
+			}
+		}
+	}
+
 } export = Pack;

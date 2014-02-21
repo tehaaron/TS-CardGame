@@ -4,6 +4,7 @@ define(["require", "exports", '../src/Card', '../src/cards/Marine', '../src/card
             this.pack = [];
 
             this.createPack();
+            this.shuffle();
         }
         Pack.prototype.createPack = function () {
             for (var i = 0; i < 5; i += 1) {
@@ -17,8 +18,20 @@ define(["require", "exports", '../src/Card', '../src/cards/Marine', '../src/card
                 this.pack.push(new NoviceSniper());
             }
             ;
+        };
 
-            return this.pack;
+        Pack.prototype.shuffle = function () {
+            var n = 8;
+            var i, j, k;
+            var temp;
+            for (i = 0; i < n; i += 1) {
+                for (j = 0; j < this.pack.length; j += 1) {
+                    k = Math.floor(Math.random() * this.pack.length);
+                    temp = this.pack[j];
+                    this.pack[j] = this.pack[k];
+                    this.pack[k] = temp;
+                }
+            }
         };
         return Pack;
     })();
