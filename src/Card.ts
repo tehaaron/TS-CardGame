@@ -1,6 +1,7 @@
 import CardRace = require('../src/CardRace');
 import CardRarity = require('../src/CardRarity');
 import CardType = require('../src/CardType');
+import Ability = require('../src/Ability');
 
 class Card {
 	Name: string;
@@ -11,10 +12,9 @@ class Card {
 	Damage: number;
 	Wait: number;
 	Image: string;
-	//Abilities: Abilities[] = null;  ??
-	//I want to add abilities which is an array that I will push ability functions into for each card. I want to define all the abilities in separate file(s).
+	Abilities: Ability[];
 
-	constructor(name: string, type: CardType, race:CardRace, rarity:CardRarity, health:number, damage:number, wait:number, image?:string) {
+	constructor(name: string, type: CardType, race:CardRace, rarity:CardRarity, health:number, damage:number, wait:number, abilities?:Ability[], image?:string) {
 		this.Name = name;
 		this.Type = cardType;
 		this.Race = cardRace;
@@ -22,17 +22,21 @@ class Card {
 		this.Health = hp;
 		this.Damage = damage;
 		this.Wait = wait;
+		this.Abilities = abilities;
 		this.Image = imageLocation;
-		//this.Abilities = [] ??
 	}
 
 	isDead() {
 		if(health < 1) {
-			dispose();
+			this.dispose();
 		} return false;
 	};
 
 	remove() {
 		//remove the card from the table
+	};
+
+	attack() {
+		//attack animation
 	};
 } export = Card;

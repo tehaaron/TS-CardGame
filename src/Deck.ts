@@ -1,13 +1,10 @@
 import Card = require('../src/Card');
 
 class Deck {
-	Cards: Card[] = null;
+	Cards: Card[];
 
-	constructor( parameters) {
+	constructor() {
 		this.Cards = [];
-
-	    super();
 	
-	     // Content
 	}
 }

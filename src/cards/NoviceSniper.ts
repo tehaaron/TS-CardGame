@@ -2,19 +2,20 @@ import Card = require('../src/Card');
 import CardRace = require('../src/CardRace');
 import CardRarity = require('../src/CardRarity');
 import CardType = require('../src/CardType');
+import Ability = require('../src/Ability');
+import Snipe = require('../src/abilities/Snipe');
 
-class Sectoid extends Card {
+class NoviceSniper extends Card {
 	constructor() {
 	    super(
-	    	'Sectoid'
+	    	'Novice Sniper'
 	    	, CardType.Ground
-	    	, CardRace.Alien
+	    	, CardRace.Human
 	    	, CardRarity.Common
 	    	, 1
-	    	, 3
 	    	, 1
+	    	, 0
+	    	, [Snipe]
 		);
-	
-	     // Content
 	}
 }
