@@ -1,5 +1,7 @@
 import Deck = require('../src/Deck');
 import Inventory = require('../src/Inventory');
+import Pack = require('../src/Pack');
+import Card = require('../src/Card');
 
 class Player {
 	name:string;
@@ -30,6 +32,7 @@ class Player {
 			clearInterval(timer);
 
 			this.addActionPoints(1);
+			console.log(this.actionPoints);
 		}
 	}
 
@@ -64,5 +67,14 @@ class Player {
 	removeMechanicalParts(n:number) {
 		this.mechanicalParts -= n;
 	}
+
+	buyPack(n:number) {
+		var x = n * 4;
+		if (this.inventory.length <= (50 - x) && this.money >= (100 * n)) {
+			var tempPack = new Pack;
+			var draw = tempPack.pack.splice(0,3);
+			this.inventory.push(draw);
+		}
+	}	
 
 } export = Player;

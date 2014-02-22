@@ -1,4 +1,5 @@
 import Card = require('../src/Card');
+
 import Marine = require('../src/cards/Marine');
 import A1Bot = require('../src/cards/A1Bot');
 import Sectoid = require('../src/cards/Sectoid');
