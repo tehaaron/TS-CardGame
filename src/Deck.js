@@ -5,5 +5,7 @@ define(["require", "exports", '../src/Card'], function(require, exports, Card) {
         }
         return Deck;
     })();
+    
+    return Deck;
 });
 //# sourceMappingURL=Deck.js.map
