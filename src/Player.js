@@ -58,7 +58,7 @@ define(["require", "exports", '../src/Deck', '../src/Inventory', '../src/Pack', 
             if (this.inventory.cards.length <= (50 - x) && this.money >= (100 * n)) {
                 var tempPack = new Pack();
                 var draw = tempPack.pack.splice(0, 3);
-                this.inventory = this.inventory.cards.concat(draw);
+                this.inventory.cards = this.inventory.cards.concat(draw);
 
                 console.log(tempPack);
                 console.log(draw);

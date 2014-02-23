@@ -30,7 +30,7 @@ class Player {
 		 if (n < 100) {
 			n += 1;
 			this.addActionPoints(1);
-			
+
 			console.log(this.actionPoints); //testing log
 		}
 	}
@@ -72,7 +72,7 @@ class Player {
 		if (this.inventory.cards.length <= (50 - x) && this.money >= (100 * n)) {
 			var tempPack = new Pack();
 			var draw = tempPack.pack.splice(0,3);
-			this.inventory = this.inventory.cards.concat(draw);
+			this.inventory.cards = this.inventory.cards.concat(draw);
 			//testing logs
 			console.log(tempPack);
 			console.log(draw);
