@@ -12,10 +12,9 @@ define(["require", "exports", '../src/Deck', '../src/Inventory', '../src/Pack', 
             this.perpetualActionPoints();
         }
         Player.prototype.perpetualActionPoints = function () {
-            var n = this.actionPoints, timer = setInterval(this.perpetualActionPoints, 60000);
+            var n = this.actionPoints, timer = setInterval(this.perpetualActionPoints.bind(this), 60000);
             if (n < 100) {
                 n += 1;
-                clearInterval(timer);
 
                 this.addActionPoints(1);
                 console.log(this.actionPoints);

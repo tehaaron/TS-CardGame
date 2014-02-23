@@ -26,10 +26,9 @@ class Player {
 
 	perpetualActionPoints() {
 		var n = this.actionPoints
-			, timer = setInterval(this.perpetualActionPoints, 60000);
+			, timer = setInterval(this.perpetualActionPoints.bind(this), 60000);
 		 if (n < 100) {
 			n += 1;
-			clearInterval(timer);
 
 			this.addActionPoints(1);
 			console.log(this.actionPoints);
@@ -76,5 +75,4 @@ class Player {
 			this.inventory.push(draw);
 		}
 	}	
-
 } export = Player;
