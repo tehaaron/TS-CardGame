@@ -29,9 +29,9 @@ class Player {
 			, timer = setInterval(this.perpetualActionPoints.bind(this), 60000);
 		 if (n < 100) {
 			n += 1;
-
 			this.addActionPoints(1);
-			console.log(this.actionPoints);
+			
+			console.log(this.actionPoints); //testing log
 		}
 	}
 
@@ -72,7 +72,12 @@ class Player {
 		if (this.inventory.cards.length <= (50 - x) && this.money >= (100 * n)) {
 			var tempPack = new Pack();
 			var draw = tempPack.pack.splice(0,3);
-			this.inventory.cards.concat(draw);
-		}
+			this.inventory = this.inventory.cards.concat(draw);
+			//testing logs
+			console.log(tempPack);
+			console.log(draw);
+			//
+			console.log('You purchased '+ n +' pack(s)');
+		} else { console.log('Error, nothing purchased'); }
 	}	
 } export = Player;
