@@ -55,10 +55,10 @@ define(["require", "exports", '../src/Deck', '../src/Inventory', '../src/Pack', 
 
         Player.prototype.buyPack = function (n) {
             var x = n * 4;
-            if (this.inventory.length <= (50 - x) && this.money >= (100 * n)) {
-                var tempPack = new Pack;
+            if (this.inventory.cards.length <= (50 - x) && this.money >= (100 * n)) {
+                var tempPack = new Pack();
                 var draw = tempPack.pack.splice(0, 3);
-                this.inventory.push(draw);
+                this.inventory.cards.concat(draw);
             }
         };
         return Player;

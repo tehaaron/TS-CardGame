@@ -1,10 +1,10 @@
 import Card = require('../src/Card');
 
 class Deck {
-	cards: Card[];
+	deck: Card[];
 
 	constructor() {
-		this.cards = [];
+		this.deck = [];
 	
 	}
 } export = Deck;

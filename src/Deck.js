@@ -1,7 +1,7 @@
 define(["require", "exports", '../src/Card'], function(require, exports, Card) {
     var Deck = (function () {
         function Deck() {
-            this.cards = [];
+            this.deck = [];
         }
         return Deck;
     })();

@@ -5,14 +5,14 @@ import Card = require('../src/Card');
 
 class Player {
 	name:string;
-	deck:Deck[];
-	inventory:Inventory[];
+	deck:Deck;
+	inventory:Inventory;
 	money:number;
 	actionPoints:number;
 	organicMaterial:number;
 	mechanicalParts:number;
 
-	constructor(name:string, deck:Deck[], inventory:Inventory[], money:number, actionPoints:number, organicMaterial:number, mechanicalParts:number) {
+	constructor(name:string, deck:Deck, inventory:Inventory, money:number, actionPoints:number, organicMaterial:number, mechanicalParts:number) {
 		this.name = name;
 		this.deck = deck;
 		this.inventory = inventory;
@@ -69,10 +69,10 @@ class Player {
 
 	buyPack(n:number) {
 		var x = n * 4;
-		if (this.inventory.length <= (50 - x) && this.money >= (100 * n)) {
-			var tempPack = new Pack;
+		if (this.inventory.cards.length <= (50 - x) && this.money >= (100 * n)) {
+			var tempPack = new Pack();
 			var draw = tempPack.pack.splice(0,3);
-			this.inventory.push(draw);
+			this.inventory.cards.concat(draw);
 		}
 	}	
 } export = Player;
