@@ -13,6 +13,7 @@ define(["require", "exports", '../src/Player', '../src/Enemy'], function(require
         };
 
         Battle.prototype.playerTurn = function () {
+            $("#game").append("<div id='playableCards'></div>");
         };
         return Battle;
     })();

@@ -2,7 +2,7 @@ require.config({
     baseUrl: './',
 
     paths: {
-    	jQuery: 'lib/jquery-2.1.0.min'
+    	jQuery: '../lib/jquery-2.1.0.min'
     },
     shim: {
     	jQuery: {
@@ -11,5 +11,8 @@ require.config({
     }
 });
 
-require(['Game', 'jQuery']);
+require(['Game', 'jQuery'],
+	(Game?, $?) => {
+		var game = new Game();
+});
 //# sourceMappingURL=main.js.map

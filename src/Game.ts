@@ -3,9 +3,14 @@ import Deck = require('../src/Deck');
 import Inventory = require('../src/Inventory');
 import Pack = require('../src/Pack');
 
+class Game {
+	player:Player;
 
-		var test = new Player('tehaaron', new Deck(), new Inventory(), 100, 50, 0, 0 );
+	constructor() {
+		this.player = new Player('tehaaron', new Deck(), new Inventory(), 100, 50, 0, 0 );
 
-		test.buyPack(1);
+		this.player.buyPack(1);
 
-		console.log(test);
+		console.log(this.player);
+	}
+} export = Game;
