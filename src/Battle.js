@@ -1,6 +1,6 @@
 define(["require", "exports", '../src/Player', '../src/Enemy'], function(require, exports, Player, Enemy) {
     var Battle = (function () {
-        function Battle(element, player, enemy, reward, money) {
+        function Battle(player, enemy, reward, money) {
             this.player = player;
             this.enemy = enemy;
             this.reward = reward;
