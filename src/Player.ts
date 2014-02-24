@@ -80,5 +80,5 @@ class Player {
 			//
 			console.log('You purchased '+ n +' pack(s)');
 		} else { console.log('Error, nothing purchased'); }
-	}	
+	}
 } export = Player;
