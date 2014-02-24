@@ -9,7 +9,7 @@ class Battle {
 	reward:Reward.Reward;
 	money:number;
 
-	constructor(player:Player, enemy:Enemy, reward:Reward.Reward, money:number) {
+	constructor(element:jQuery, player:Player, enemy:Enemy, reward:Reward.Reward, money:number) {
 		this.player = player;
 		this.enemy = enemy;
 		this.reward = reward;
