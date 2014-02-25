@@ -1,10 +1,10 @@
-define(["require", "exports", '../src/Player', '../src/enemies/CommanderLlama', '../src/Deck', '../src/Inventory', '../src/Pack', '../src/Card', '../src/cards/Marine'], function(require, exports, Player, CommanderLlama, Deck, Inventory, Pack, Card, Marine) {
+define(["require", "exports", '../src/Player', '../src/enemies/CommanderLlama', '../src/Deck', '../src/Inventory', '../src/Pack', '../src/Card', '../src/cards/NoviceSniper'], function(require, exports, Player, CommanderLlama, Deck, Inventory, Pack, Card, NoviceSniper) {
     var Game = (function () {
         function Game() {
             this.player = new Player('tehaaron', new Deck(), new Inventory(), 100, 50, 0, 0);
 
             this.player.deck.addCard2Deck(new Card('TestGuy', 1, 1, 1, 10, 10, 0));
-            this.player.deck.addCard2Deck(new Marine());
+            this.player.deck.addCard2Deck(new NoviceSniper());
 
             console.log(this.player);
 

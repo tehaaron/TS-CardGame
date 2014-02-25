@@ -4,11 +4,13 @@ var __extends = this.__extends || function (d, b) {
     __.prototype = b.prototype;
     d.prototype = new __();
 };
-define(["require", "exports", '../Card', '../CardRace', '../CardRarity', '../CardType', '../Ability'], function(require, exports, Card, Race, Rarity, Type, Ability) {
+define(["require", "exports", '../Card', '../CardRace', '../CardRarity', '../CardType', '../Ability', '../abilities/Snipe'], function(require, exports, Card, Race, Rarity, Type, Ability, Snipe) {
     var NoviceSniper = (function (_super) {
         __extends(NoviceSniper, _super);
         function NoviceSniper() {
             _super.call(this, 'Novice Sniper', 0 /* Ground */, 0 /* Human */, 0 /* Common */, 1, 1, 0, []);
+
+            this.addAbility(new Snipe(1));
         }
         return NoviceSniper;
     })(Card);

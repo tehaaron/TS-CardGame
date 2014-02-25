@@ -17,5 +17,7 @@ class NoviceSniper extends Card {
 	    	, 0
 	    	, []
 		);
+
+		this.addAbility(new Snipe(1));
 	}
 } export = NoviceSniper;

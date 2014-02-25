@@ -4,7 +4,7 @@ class Snipe extends Ability {
 	damage: number;
 	
 	constructor(damage:number) {
-		this.damage = 1;
+		this.damage = damage;
 	    super(
 	    	'Snipe '+this.damage
 	    	, true //disabled until card wait is over
@@ -14,4 +14,4 @@ class Snipe extends Ability {
 	    	//attack animation including targetting logic
 	    } */
 	}
-}
+} export = Snipe;

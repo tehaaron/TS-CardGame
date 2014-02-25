@@ -8,10 +8,12 @@ define(["require", "exports", '../Ability'], function(require, exports, Ability)
     var Snipe = (function (_super) {
         __extends(Snipe, _super);
         function Snipe(damage) {
-            this.damage = 1;
+            this.damage = damage;
             _super.call(this, 'Snipe ' + this.damage, true);
         }
         return Snipe;
     })(Ability);
+    
+    return Snipe;
 });
 //# sourceMappingURL=Snipe.js.map

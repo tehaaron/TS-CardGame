@@ -8,9 +8,13 @@ define(["require", "exports", '../src/Ability'], function(require, exports, Abil
             this.health = health;
             this.damage = damage;
             this.wait = wait;
-            this.abilities = abilities;
+            this.abilities = [];
             this.image = image;
         }
+        Card.prototype.addAbility = function (ability) {
+            this.abilities.push(ability);
+        };
+
         Card.prototype.isDead = function () {
             if (this.health < 1) {
                 this.remove();

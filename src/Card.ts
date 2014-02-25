@@ -13,6 +13,7 @@ class Card {
 	wait: number;
 	image: string;
 	abilities: Ability[];
+	ability:Ability;
 
 	constructor(name:string, type:Type.CardType, race:Race.CardRace, rarity:Rarity.CardRarity, health:number, damage:number, wait:number, abilities?:Ability[], image?:string) {
 		this.name = name;
@@ -22,8 +23,12 @@ class Card {
 		this.health = health;
 		this.damage = damage;
 		this.wait = wait;
-		this.abilities = abilities;
+		this.abilities = [];
 		this.image = image;
+	}
+
+	addAbility(ability:Ability) {
+		this.abilities.push(ability);
 	}
 
 	isDead() {

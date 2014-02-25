@@ -4,12 +4,12 @@ var __extends = this.__extends || function (d, b) {
     __.prototype = b.prototype;
     d.prototype = new __();
 };
-define(["require", "exports", '../Enemy', '../Deck', '../cards/Marine'], function(require, exports, Enemy, Deck, Marine) {
+define(["require", "exports", '../Enemy', '../Deck', '../cards/NoviceSniper'], function(require, exports, Enemy, Deck, NoviceSniper) {
     var CommanderLlama = (function (_super) {
         __extends(CommanderLlama, _super);
         function CommanderLlama() {
             _super.call(this, 'Commander Llama', new Deck());
-            this.deck.addCard2Deck(new Marine());
+            this.deck.addCard2Deck(new NoviceSniper());
         }
         return CommanderLlama;
     })(Enemy);
