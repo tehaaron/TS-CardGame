@@ -1,0 +1,1 @@
+export enum CardRarity { Common, Standout, Exquisite, Diety }

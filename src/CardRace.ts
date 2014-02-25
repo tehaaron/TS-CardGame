@@ -1,0 +1,1 @@
+export enum CardRace { Human, Alien, Robot }
