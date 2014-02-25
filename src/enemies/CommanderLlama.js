@@ -9,8 +9,11 @@ define(["require", "exports", '../Enemy', '../Deck', '../cards/Marine'], functio
         __extends(CommanderLlama, _super);
         function CommanderLlama() {
             _super.call(this, 'Commander Llama', new Deck());
+            this.deck.addCard2Deck(new Marine());
         }
         return CommanderLlama;
     })(Enemy);
+    
+    return CommanderLlama;
 });
 //# sourceMappingURL=CommanderLlama.js.map

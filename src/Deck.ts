@@ -12,8 +12,12 @@ class Deck {
 		this.shuffle();
 	}
 
-	addCard(card:Card) { //desired usage Player.deck.addCard(somecard)
+	addCard2Deck(card:Card) {
 		this.deck.push(card);
+	}
+
+	addCard2Active(card:Card) {
+		this.active.push(card);
 	}
 
 	keepThree() {

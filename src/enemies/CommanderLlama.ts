@@ -8,5 +8,6 @@ class CommanderLlama extends Enemy {
 			'Commander Llama'
 			, new Deck() //I dont want to have to call new card, I just want an empty array
 			);
+		this.deck.addCard2Deck(new Marine());
 	}
-}
+} export = CommanderLlama;

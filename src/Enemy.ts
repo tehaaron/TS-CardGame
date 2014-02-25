@@ -8,6 +8,7 @@ class Enemy {
 	constructor(name:string, deck:Deck) {
 	    this.name = name;
 	    this.deck = deck;
+
 	}
 
 } export = Enemy;
