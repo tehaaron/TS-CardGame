@@ -15,7 +15,7 @@ class Card {
 	abilities: Ability[];
 	ability:Ability;
 
-	constructor(name:string, type:Type.CardType, race:Race.CardRace, rarity:Rarity.CardRarity, health:number, damage:number, wait:number, abilities?:Ability[], image?:string) {
+	constructor(name:string, type:Type.CardType, race:Race.CardRace, rarity:Rarity.CardRarity, health:number, damage:number, wait:number, image?:string, abilities?:Ability[]) {
 		this.name = name;
 		this.type = type;
 		this.race = race;
@@ -23,8 +23,8 @@ class Card {
 		this.health = health;
 		this.damage = damage;
 		this.wait = wait;
-		this.abilities = [];
 		this.image = image;
+		this.abilities = [];
 	}
 
 	addAbility(ability:Ability) {

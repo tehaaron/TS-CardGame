@@ -1,6 +1,6 @@
 define(["require", "exports", '../src/Ability'], function(require, exports, Ability) {
     var Card = (function () {
-        function Card(name, type, race, rarity, health, damage, wait, abilities, image) {
+        function Card(name, type, race, rarity, health, damage, wait, image, abilities) {
             this.name = name;
             this.type = type;
             this.race = race;
@@ -8,8 +8,8 @@ define(["require", "exports", '../src/Ability'], function(require, exports, Abil
             this.health = health;
             this.damage = damage;
             this.wait = wait;
-            this.abilities = [];
             this.image = image;
+            this.abilities = [];
         }
         Card.prototype.addAbility = function (ability) {
             this.abilities.push(ability);

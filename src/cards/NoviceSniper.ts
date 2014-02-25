@@ -15,6 +15,7 @@ class NoviceSniper extends Card {
 	    	, 1
 	    	, 1
 	    	, 0
+	    	, "<div class='noviceSniper'><h3>Novice Sniper</h3><p>Snipe 1</p></div>"
 	    	, []
 		);
 

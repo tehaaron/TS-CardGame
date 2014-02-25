@@ -1,0 +1,21 @@
+#playableCards {
+	display:block;
+	width: 400px;
+	height: 150px;
+	border: 4px solid LightSlateGray;
+	background-color: Lightgray;
+	padding:10px;
+	position: relative;
+	overflow: auto;
+}
+
+.marine, .noviceSniper {
+	display:block;
+	width: 100px;
+	height: 125px;
+	border: 2px solid LightSteelBlue;
+	background-color: Silver;
+	padding: 5px;
+	float: left;
+	margin-right: 10px;
+}

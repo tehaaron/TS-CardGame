@@ -13,6 +13,7 @@ class Marine extends Card {
 	    	, 3
 	    	, 1
 	    	, 0
+	    	, "<div class='marine'><h3>Marine</h3></div>"
 		);
 	}
 } export = Marine;

@@ -8,7 +8,7 @@ define(["require", "exports", '../Card', '../CardRace', '../CardRarity', '../Car
     var Marine = (function (_super) {
         __extends(Marine, _super);
         function Marine() {
-            _super.call(this, 'Marine', 0 /* Ground */, 0 /* Human */, 0 /* Common */, 3, 1, 0);
+            _super.call(this, 'Marine', 0 /* Ground */, 0 /* Human */, 0 /* Common */, 3, 1, 0, "<div class='marine'><h3>Marine</h3></div>");
         }
         return Marine;
     })(Card);
