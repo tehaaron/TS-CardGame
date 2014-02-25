@@ -6,6 +6,10 @@ define(["require", "exports", '../src/Card'], function(require, exports, Card) {
 
             this.shuffle();
         }
+        Deck.prototype.addCard = function (card) {
+            this.deck.push(card);
+        };
+
         Deck.prototype.keepThree = function () {
             var n = 3;
             if (this.active.length === 0) {

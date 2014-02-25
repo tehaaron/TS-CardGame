@@ -1,6 +1,7 @@
 import Card = require('../src/Card');
 
 class Deck {
+	card:Card;
 	deck: Card[];
 	active: Card[];
 
@@ -9,6 +10,10 @@ class Deck {
 		this.active = [];
 
 		this.shuffle();
+	}
+
+	addCard(card:Card) { //desired usage Player.deck.addCard(somecard)
+		this.deck.push(card);
 	}
 
 	keepThree() {
