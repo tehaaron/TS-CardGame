@@ -17,7 +17,7 @@ class Battle {
 
 	fight() {
 		//1. call playerTurn to select card
-		//2. once card is placed on the table, commence fighting
+		//2. once card is placed on the table, commence fighting - use a promise??
 		//3. if there is an adjacent card, attack it, if not attack commander
 		//4. if commander hp reaches 0 then victory and award money and possibly reward
 	}
