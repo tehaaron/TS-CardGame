@@ -1,10 +1,15 @@
 import Card = require('../src/Card');
 
 class Inventory {
-	cards: Card[];
+	card:Card;
+	inventory: Card[];
 
 	constructor() {
-		this.cards = [];
+		this.inventory = [];
 	
+	}
+
+	addCard(card:Card) {
+		this.inventory.push(card);
 	}
 } export = Inventory;

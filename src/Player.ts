@@ -69,11 +69,11 @@ class Player {
 
 	buyPack(n:number) {
 		var x = n * 4;
-		if (this.inventory.cards.length <= (50 - x) && this.money >= (100 * n)) {
+		if (this.inventory.inventory.length <= (50 - x) && this.money >= (100 * n)) {
 			this.money = this.money - (100 * n);
 			var tempPack = new Pack();
 			var draw = tempPack.pack.splice(0,3);
-			this.inventory.cards = this.inventory.cards.concat(draw);
+			this.inventory.inventory = this.inventory.inventory.concat(draw);
 			//testing logs
 			console.log(tempPack);
 			console.log(draw);
