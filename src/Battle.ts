@@ -1,6 +1,7 @@
 import Player = require('../src/Player');
 import Enemy = require('../src/Enemy');
 import Reward = require('../src/Reward');
+import Card = require('../src/Card');
 
 class Battle {
 	player:Player;
@@ -13,6 +14,8 @@ class Battle {
 		this.enemy = enemy;
 		this.money = money;
 		this.reward = reward;
+
+		var inPlay = new Array<Card>();
 
 		this.enemy.deck.shuffle();
 		this.player.deck.shuffle();
@@ -35,7 +38,11 @@ class Battle {
 		//1. paint card select window - 3 cards from deck
 		this.player.deck.keepThree(); //remove cards from deck and add them to the playable cards array (active)
 		$.when($("#game").append("<div id='playableCards'></div>")).done($("#playableCards").append(this.player.deck.active[0].image, this.player.deck.active[1].image, this.player.deck.active[2].image));
-		//$("")
+		$(".playable").click(function() {
+			$(this).removeClass("playable");
+			$("#playableCards").remove();
+			//call function that splices clicked card from array and pushes into inPlay array
+			});
 		//2. player picks the card they want to play by clicking it
 		//3. Card is removed from the select window/deck (splice) and placed one the table
 	}
