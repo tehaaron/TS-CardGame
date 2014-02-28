@@ -3,20 +3,20 @@ import Card = require('../src/Card');
 class Deck {
 	card:Card;
 	deck: Card[];
-	active: Card[];
+//	active: Card[];
 
 	constructor() {
 		this.deck = [];
-		this.active = [];
+//		this.active = [];
 
 		this.shuffle();
-		this.keepThree();
+//		this.keepThree();
 	}
 
 	addCard2Deck(card:Card) {
 		this.deck.push(card);
 	}
-
+/*
 	addCard2Active(card:Card) {
 		this.active.push(card);
 	}
@@ -37,7 +37,7 @@ class Deck {
 			//
 		}
 	}
-
+*/
 	shuffle() {
 		var n = 8;
 		var i, j, k;

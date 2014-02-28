@@ -36,14 +36,21 @@ class Battle {
 
 	playerTurn() {
 		//1. paint card select window - 3 cards from deck
-		this.player.deck.keepThree(); //remove cards from deck and add them to the playable cards array (active)
-		$.when($("#game").append("<div id='playableCards'></div>")).done($("#playableCards").append(this.player.deck.active[0].image, this.player.deck.active[1].image, this.player.deck.active[2].image));
-		$(".playable").click(function() {
+//		this.player.deck.keepThree(); //remove cards from deck and add them to the playable cards array (active)
+		$.when($("#game").append("<div id='playableCards'></div>")).done($("#playableCards").append(this.player.deck.deck[0].getHTML("0"), this.player.deck.deck[1].getHTML("1"), this.player.deck.deck[2].getHTML("2")));
+		$("div.playable").click(function() {
+			var clickedID = parseInt(this.id);
+			this.player.deck.deck.splice(clickedID, clickedID + 1);
 			$(this).removeClass("playable");
-			$("#playableCards").remove();
+//			$("#playableCards").remove();
 			//call function that splices clicked card from array and pushes into inPlay array
 			});
+
 		//2. player picks the card they want to play by clicking it
 		//3. Card is removed from the select window/deck (splice) and placed one the table
+	}
+
+	playCard(id:string) {
+
 	}
 } export = Battle;

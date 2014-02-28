@@ -20,12 +20,15 @@ define(["require", "exports", '../src/Player', '../src/Enemy', '../src/Card'], f
         };
 
         Battle.prototype.playerTurn = function () {
-            this.player.deck.keepThree();
-            $.when($("#game").append("<div id='playableCards'></div>")).done($("#playableCards").append(this.player.deck.active[0].image, this.player.deck.active[1].image, this.player.deck.active[2].image));
-            $(".playable").click(function () {
+            $.when($("#game").append("<div id='playableCards'></div>")).done($("#playableCards").append(this.player.deck.deck[0].getHTML("0"), this.player.deck.deck[1].getHTML("1"), this.player.deck.deck[2].getHTML("2")));
+            $("div.playable").click(function () {
+                var clickedID = parseInt(this.id);
+                this.player.deck.deck.splice(clickedID, clickedID + 1);
                 $(this).removeClass("playable");
-                $("#playableCards").remove();
             });
+        };
+
+        Battle.prototype.playCard = function (id) {
         };
         return Battle;
     })();
