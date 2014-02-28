@@ -8,9 +8,13 @@ define(["require", "exports", '../src/Ability'], function(require, exports, Abil
             this.health = health;
             this.damage = damage;
             this.wait = wait;
-            this.image = image;
+            this.image = this.setImage(image);
             this.abilities = [];
         }
+        Card.prototype.setImage = function (image) {
+            return "<div class='card playable " + image + "'><h3>" + this.name + "</h3></div>";
+        };
+
         Card.prototype.addAbility = function (ability) {
             this.abilities.push(ability);
         };

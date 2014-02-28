@@ -9,7 +9,7 @@
 	overflow: auto;
 }
 
-.marine, .noviceSniper {
+.card {
 	display:block;
 	width: 100px;
 	height: 125px;

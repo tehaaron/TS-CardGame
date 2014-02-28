@@ -23,8 +23,12 @@ class Card {
 		this.health = health;
 		this.damage = damage;
 		this.wait = wait;
-		this.image = image;
+		this.image = this.setImage(image);
 		this.abilities = [];
+	}
+
+	setImage(image:string) {
+		return "<div class='card playable "+image+"'><h3>"+this.name+"</h3></div>"
 	}
 
 	addAbility(ability:Ability) {
