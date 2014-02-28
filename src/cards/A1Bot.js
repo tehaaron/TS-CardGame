@@ -8,7 +8,7 @@ define(["require", "exports", '../Card', '../CardRace', '../CardRarity', '../Car
     var A1Bot = (function (_super) {
         __extends(A1Bot, _super);
         function A1Bot() {
-            _super.call(this, '1A Bot', 0 /* Ground */, 2 /* Robot */, 0 /* Common */, 2, 2, 0);
+            _super.call(this, 'A1 Bot', 0 /* Ground */, 2 /* Robot */, 0 /* Common */, 2, 2, 0, "a1Bot");
         }
         return A1Bot;
     })(Card);

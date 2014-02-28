@@ -7,6 +7,8 @@ import Card = require('../src/Card');
 import NoviceSniper = require('../src/cards/NoviceSniper');
 import Marine = require('../src/cards/Marine');
 import Battle = require('../src/Battle');
+import Sectoid = require('../src/cards/Sectoid');
+import A1Bot = require('../src/cards/A1Bot');
 
 class Game {
 	player:Player;
@@ -17,7 +19,10 @@ class Game {
 
 		//this.player.deck.addCard2Deck(new Card('TestGuy', 1, 1, 1, 10, 10, 0)); //This works!
 		this.player.deck.addCard2Deck(new Marine());
-		this.player.deck.addCard2Deck(new NoviceSniper());//This works!
+		this.player.deck.addCard2Deck(new NoviceSniper());
+		this.player.deck.addCard2Deck(new Sectoid());
+		this.player.deck.addCard2Deck(new A1Bot());
+		this.player.deck.addCard2Deck(new NoviceSniper());
 		this.player.deck.addCard2Deck(new Marine());
 		/* These wont work:
 		this.player.deck.addCard(new Card('TestGuy', Ground, Human, Common, 10, 10, 0));

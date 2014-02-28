@@ -6,17 +6,20 @@ define(["require", "exports", '../src/Player', '../src/Enemy'], function(require
             this.money = money;
             this.reward = reward;
 
+            this.enemy.deck.shuffle();
+            this.player.deck.shuffle();
             this.fight();
         }
         Battle.prototype.fight = function () {
-            $.when(this.playerTurn()).done($("#playableCards").append(this.player.deck.deck[0].image, this.player.deck.deck[1].image, this.player.deck.deck[2].image));
+            this.playerTurn();
         };
 
         Battle.prototype.enemyTurn = function () {
         };
 
         Battle.prototype.playerTurn = function () {
-            $("#game").append("<div id='playableCards'></div>");
+            this.player.deck.keepThree();
+            $.when($("#game").append("<div id='playableCards'></div>")).done($("#playableCards").append(this.player.deck.active[0].image, this.player.deck.active[1].image, this.player.deck.active[2].image));
         };
         return Battle;
     })();

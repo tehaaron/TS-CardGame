@@ -10,6 +10,7 @@ class Deck {
 		this.active = [];
 
 		this.shuffle();
+		this.keepThree();
 	}
 
 	addCard2Deck(card:Card) {
@@ -23,16 +24,16 @@ class Deck {
 	keepThree() {
 		var n = 3;
 		if (this.active.length === 0) {
-			var draw = this.deck.splice(0,2);
+			var draw = this.deck.splice(0,3);
 			this.active = this.active.concat(draw);
 			//testing logs
-			console.log(draw);
+			console.log('keepThree drew 3: '+draw);
 			//
 		} else if (this.active.length <= 2) {
-			var drawOne = this.deck.splice(0,0);
+			var drawOne = this.deck.splice(0,1);
 			this.active = this.active.concat(drawOne);
 			//testing logs
-			console.log(drawOne);
+			console.log('keepThree drew 1: '+drawOne);
 			//
 		}
 	}

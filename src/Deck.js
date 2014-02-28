@@ -5,6 +5,7 @@ define(["require", "exports", '../src/Card'], function(require, exports, Card) {
             this.active = [];
 
             this.shuffle();
+            this.keepThree();
         }
         Deck.prototype.addCard2Deck = function (card) {
             this.deck.push(card);
@@ -17,15 +18,15 @@ define(["require", "exports", '../src/Card'], function(require, exports, Card) {
         Deck.prototype.keepThree = function () {
             var n = 3;
             if (this.active.length === 0) {
-                var draw = this.deck.splice(0, 2);
+                var draw = this.deck.splice(0, 3);
                 this.active = this.active.concat(draw);
 
-                console.log(draw);
+                console.log('keepThree drew 3: ' + draw);
             } else if (this.active.length <= 2) {
-                var drawOne = this.deck.splice(0, 0);
+                var drawOne = this.deck.splice(0, 1);
                 this.active = this.active.concat(drawOne);
 
-                console.log(drawOne);
+                console.log('keepThree drew 1: ' + drawOne);
             }
         };
 

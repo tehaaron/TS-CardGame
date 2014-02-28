@@ -8,7 +8,7 @@ define(["require", "exports", '../Card', '../CardRace', '../CardRarity', '../Car
     var Sectoid = (function (_super) {
         __extends(Sectoid, _super);
         function Sectoid() {
-            _super.call(this, 'Sectoid', 0 /* Ground */, 1 /* Alien */, 0 /* Common */, 1, 3, 1);
+            _super.call(this, 'Sectoid', 0 /* Ground */, 1 /* Alien */, 0 /* Common */, 1, 3, 1, "sectoid");
         }
         return Sectoid;
     })(Card);

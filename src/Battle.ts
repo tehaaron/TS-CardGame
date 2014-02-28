@@ -14,12 +14,14 @@ class Battle {
 		this.money = money;
 		this.reward = reward;
 
+		this.enemy.deck.shuffle();
+		this.player.deck.shuffle();
 		this.fight();
 	}
 
 	fight() {
 		//1. call playerTurn to select card
-		$.when(this.playerTurn()).done($("#playableCards").append(this.player.deck.deck[0].image, this.player.deck.deck[1].image, this.player.deck.deck[2].image));
+		this.playerTurn();
 		//2. once card is placed on the table, commence fighting - use a promise??
 		//3. if there is an adjacent card, attack it, if not attack commander
 		//4. if commander hp reaches 0 then victory and award money and possibly reward
@@ -31,7 +33,9 @@ class Battle {
 
 	playerTurn() {
 		//1. paint card select window - 3 cards from deck
-		$("#game").append("<div id='playableCards'></div>");
+		this.player.deck.keepThree(); //remove cards from deck and add them to the playable cards array (active)
+		$.when($("#game").append("<div id='playableCards'></div>")).done($("#playableCards").append(this.player.deck.active[0].image, this.player.deck.active[1].image, this.player.deck.active[2].image));
+		//$("")
 		//2. player picks the card they want to play by clicking it
 		//3. Card is removed from the select window/deck (splice) and placed one the table
 	}

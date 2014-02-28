@@ -13,6 +13,7 @@ class Sectoid extends Card {
 	    	, 1
 	    	, 3
 	    	, 1
+	    	, "sectoid"
 		);
 	
 	     // Content
