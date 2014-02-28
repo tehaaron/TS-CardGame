@@ -16,7 +16,7 @@ define(["require", "exports", '../src/Player', '../src/enemies/CommanderLlama', 
 
             console.log(this.enemy);
 
-            var newBattle = new Battle(this.player, this.enemy, 100);
+            var newBattle = new Battle(this.player, this.enemy, 100, []);
 
             console.log(newBattle);
         }

@@ -27,8 +27,8 @@ class Card {
 		this.abilities = [];
 	}
 
-	getHTML(id:string) {
-		return "<div id='"+id+"' class='card playable "+this.image+"'><h3>"+this.name+"</h3></div>"
+	getHTML(cssID:string) {
+		return "<div id='"+cssID+"' class='card playable "+this.image+"'><h3>"+this.name+"</h3></div>"
 	}
 
 	addAbility(ability:Ability) {
