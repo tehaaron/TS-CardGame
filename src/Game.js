@@ -1,6 +1,6 @@
 define(["require", "exports", '../src/Player', '../src/enemies/CommanderLlama', '../src/Deck', '../src/Inventory', '../src/Pack', '../src/Card', '../src/cards/NoviceSniper', '../src/cards/Marine', '../src/Battle', '../src/cards/Sectoid', '../src/cards/A1Bot'], function(require, exports, Player, CommanderLlama, Deck, Inventory, Pack, Card, NoviceSniper, Marine, Battle, Sectoid, A1Bot) {
     var Game = (function () {
-        function Game() {
+        function Game($scope) {
             this.player = new Player('tehaaron', new Deck(), new Inventory(), 100, 50, 0, 0);
 
             this.player.deck.addCard2Deck(new Marine());
@@ -16,7 +16,7 @@ define(["require", "exports", '../src/Player', '../src/enemies/CommanderLlama', 
 
             console.log(this.enemy);
 
-            var newBattle = new Battle(this.player, this.enemy, 100, []);
+            var newBattle = new Battle($scope, this.player, this.enemy, 100, []);
 
             console.log(newBattle);
         }

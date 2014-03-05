@@ -11,10 +11,12 @@ import Sectoid = require('../src/cards/Sectoid');
 import A1Bot = require('../src/cards/A1Bot');
 
 class Game {
+
 	player:Player;
 	enemy:CommanderLlama;
+	$scope:ng.IScope;
 
-	constructor() {
+	constructor($scope:ng.IScope) {
 		this.player = new Player('tehaaron', new Deck(), new Inventory(), 100, 50, 0, 0 );
 
 		//this.player.deck.addCard2Deck(new Card('TestGuy', 1, 1, 1, 10, 10, 0)); //This works!
@@ -36,7 +38,7 @@ class Game {
 
 		console.log(this.enemy);
 
-		var newBattle = new Battle(this.player, this.enemy, 100, []);
+		var newBattle = new Battle($scope, this.player, this.enemy, 100, []);
 
 		console.log(newBattle);
 	}
