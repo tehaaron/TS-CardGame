@@ -1,3 +1,7 @@
+//this view setup works when I run http-server from the TS-CardGame server which means manually 
+//going to /src via the link. Easy fix to serve up /src by default but then I would need to change all the relative links
+//will make the change sometime in the future
+
 import Game = require('../src/Game');
 
 export class Launcher {
@@ -7,13 +11,12 @@ export class Launcher {
 
         this.launcher = angular.module('launcher', ['ngRoute'],
             function ($routeProvider: ng.route.IRouteProvider, $locationProvider: ng.ILocationProvider) {
-                $routeProvider.when('/', {
-                    templateUrl: 'game.html',
+                $locationProvider.html5Mode(true);
+                $routeProvider.when('/src', {
+                    templateUrl: '/src/game.html',
                     controller: Game,
                     controllerAs: 'Game'
                 });
-                
-                $locationProvider.html5Mode(true);
             }); 
         angular.bootstrap(document, ['launcher'])    
     }
