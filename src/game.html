@@ -1,5 +1,10 @@
 	<div id="game">
-	<h1>TEST</h1>
-	words
-
+		<ul>
+			<li data-ng-repeat="Game.player.deck.deck[$index] in Game.player.deck.deck">
+				{{Game.player.deck.deck[$index].name}}
+			</li>
+			<li>
+				{{Game.player.deck.deck[0].name}}
+			</li>
+		</ul>
 	</div>
