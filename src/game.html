@@ -1,7 +1,7 @@
 	<div id="game">
 		<ul>
 			<li ng-repeat="card in game.player.deck.slice(0,3) track by $index">
-				{{card.getHTML("$index")}}
+				{{card.getHTML($sce, $index)}}
 			</li>
 		</ul>
 	</div>

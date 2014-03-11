@@ -13,8 +13,9 @@ class Game {
 	player:Player;
 	enemy:CommanderLlama;
 	$scope:ng.IScope;
+	$sce:ng.ISCEService;
 
-	constructor($scope:ng.IScope) {
+	constructor($scope:ng.IScope, $sce:ng.ISCEService) {
 		this.player = new Player('tehaaron', [], [], 100, 50, 0, 0 );
 
 		//this.player.addCard2Deck(new Card('TestGuy', 1, 1, 1, 10, 10, 0)); //This works!
@@ -36,7 +37,7 @@ class Game {
 
 		console.log(this.enemy);
 
-		var newBattle = new Battle($scope, this.player, this.enemy, 100, []);
+		var newBattle = new Battle($scope, $sce, this.player, this.enemy, 100, []);
 
 		console.log(newBattle);
 	}

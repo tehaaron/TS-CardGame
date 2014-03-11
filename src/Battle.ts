@@ -10,9 +10,11 @@ class Battle {
 	inPlay:Card[];
 	reward:Reward.Reward;
 	$scope:ng.IScope;
+	$sce:ng.ISCEService;
 
-	constructor($scope:ng.IScope, player:Player, enemy:Enemy, money:number, inPlay:Card[], reward?:Reward.Reward) {
+	constructor($scope:ng.IScope, $sce:ng.ISCEService, player:Player, enemy:Enemy, money:number, inPlay:Card[], reward?:Reward.Reward) {
 		this.$scope = $scope;
+		this.$sce = $sce;
 		this.player = player;
 		this.enemy = enemy;
 		this.money = money;
@@ -39,7 +41,7 @@ class Battle {
 
 	playerTurn() {
 		$("#game").append("<div id='playableCards'></div>");
-		$("#playableCards").append(this.player.deck[0].getHTML("0"), this.player.deck[1].getHTML("1"), this.player.deck[2].getHTML("2"));
+		$("#playableCards").append(this.player.deck[0].getHTML(this.$sce,"0"), this.player.deck[1].getHTML(this.$sce,"1"), this.player.deck[2].getHTML(this.$sce,"2"));
 		$("div.playable").on("click", (event:any) => {
 			var play = this.player.deck.splice(+event.target.id, 1);
 			this.inPlay.push(play[0]);

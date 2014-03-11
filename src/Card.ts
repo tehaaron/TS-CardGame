@@ -15,6 +15,8 @@ class Card {
 	abilities: Ability[];
 	ability:Ability;
 
+	$sce:ng.ISCEService;
+
 	constructor(name:string, type:Type.CardType, race:Race.CardRace, rarity:Rarity.CardRarity, health:number, damage:number, wait:number, image?:string, abilities?:Ability[]) {
 		this.name = name;
 		this.type = type;
@@ -27,8 +29,8 @@ class Card {
 		this.abilities = [];
 	}
 
-	getHTML(cssID:string) {
-		return "<div id='"+cssID+"' class='card playable "+this.image+"'><h3>"+this.name+"</h3></div>"
+	getHTML($sce:ng.ISCEService, cssID:string) {
+		return $sce.trustAsHtml("<div id='"+cssID+"' class='card playable "+this.image+"'><h3>"+this.name+"</h3></div>");
 	}
 
 	addAbility(ability:Ability) {

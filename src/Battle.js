@@ -1,7 +1,8 @@
 define(["require", "exports", '../src/Player', '../src/Enemy', '../src/Card'], function(require, exports, Player, Enemy, Card) {
     var Battle = (function () {
-        function Battle($scope, player, enemy, money, inPlay, reward) {
+        function Battle($scope, $sce, player, enemy, money, inPlay, reward) {
             this.$scope = $scope;
+            this.$sce = $sce;
             this.player = player;
             this.enemy = enemy;
             this.money = money;
@@ -23,7 +24,7 @@ define(["require", "exports", '../src/Player', '../src/Enemy', '../src/Card'], f
         Battle.prototype.playerTurn = function () {
             var _this = this;
             $("#game").append("<div id='playableCards'></div>");
-            $("#playableCards").append(this.player.deck[0].getHTML("0"), this.player.deck[1].getHTML("1"), this.player.deck[2].getHTML("2"));
+            $("#playableCards").append(this.player.deck[0].getHTML(this.$sce, "0"), this.player.deck[1].getHTML(this.$sce, "1"), this.player.deck[2].getHTML(this.$sce, "2"));
             $("div.playable").on("click", function (event) {
                 var play = _this.player.deck.splice(+event.target.id, 1);
                 _this.inPlay.push(play[0]);

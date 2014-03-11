@@ -11,8 +11,8 @@ define(["require", "exports", '../src/Ability'], function(require, exports, Abil
             this.image = image;
             this.abilities = [];
         }
-        Card.prototype.getHTML = function (cssID) {
-            return "<div id='" + cssID + "' class='card playable " + this.image + "'><h3>" + this.name + "</h3></div>";
+        Card.prototype.getHTML = function ($sce, cssID) {
+            return $sce.trustAsHtml("<div id='" + cssID + "' class='card playable " + this.image + "'><h3>" + this.name + "</h3></div>");
         };
 
         Card.prototype.addAbility = function (ability) {
