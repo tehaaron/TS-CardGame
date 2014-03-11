@@ -19,8 +19,8 @@ class Battle {
 		this.inPlay = inPlay;
 		this.reward = reward;
 
-		this.enemy.deck.shuffle();
-		this.player.deck.shuffle();
+		this.enemy.shuffle();
+		this.player.shuffle();
 		this.fight();
 	}
 
@@ -39,9 +39,9 @@ class Battle {
 
 	playerTurn() {
 		$("#game").append("<div id='playableCards'></div>");
-		$("#playableCards").append(this.player.deck.deck[0].getHTML("0"), this.player.deck.deck[1].getHTML("1"), this.player.deck.deck[2].getHTML("2"));
+		$("#playableCards").append(this.player.deck[0].getHTML("0"), this.player.deck[1].getHTML("1"), this.player.deck[2].getHTML("2"));
 		$("div.playable").on("click", (event:any) => {
-			var play = this.player.deck.deck.splice(+event.target.id, 1);
+			var play = this.player.deck.splice(+event.target.id, 1);
 			this.inPlay.push(play[0]);
 			$(event.target).removeClass("playable");
 			$(event.target).remove();

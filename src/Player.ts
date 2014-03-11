@@ -1,21 +1,21 @@
-import Deck = require('../src/Deck');
-import Inventory = require('../src/Inventory');
 import Pack = require('../src/Pack');
 import Card = require('../src/Card');
 
 class Player {
+	card:Card;
+
 	name:string;
-	deck:Deck;
-	inventory:Inventory;
+	deck:Card[];
+	inventory:Card[];
 	money:number;
 	actionPoints:number;
 	organicMaterial:number;
 	mechanicalParts:number;
 
-	constructor(name:string, deck:Deck, inventory:Inventory, money:number, actionPoints:number, organicMaterial:number, mechanicalParts:number) {
+	constructor(name:string, deck:Card[], inventory:Card[], money:number, actionPoints:number, organicMaterial:number, mechanicalParts:number) {
 		this.name = name;
-		this.deck = deck;
-		this.inventory = inventory;
+		this.deck = [];
+		this.inventory = [];
 		this.money = money;
 		this.actionPoints = actionPoints;
 		this.organicMaterial = organicMaterial;
@@ -33,6 +33,45 @@ class Player {
 
 			console.log(this.actionPoints); //testing log
 		}
+	}
+
+	shuffle() {
+		var n = 8;
+		var i, j, k;
+		var temp;
+		for (i = 0; i < n; i += 1 ) {
+			for (j = 0; j < this.deck.length; j += 1) {
+				k = Math.floor(Math.random() * this.deck.length);
+				temp = this.deck[j];
+				this.deck[j] = this.deck[k];
+				this.deck[k] = temp; 
+			}
+		}
+	}
+/*
+	keepThree() {
+		var n = 3;
+		if (this.active.length === 0) {
+			var draw = this.deck.splice(0,3);
+			this.active = this.active.concat(draw);
+			//testing logs
+			console.log('keepThree drew 3: '+draw);
+			//
+		} else if (this.active.length <= 2) {
+			var drawOne = this.deck.splice(0,1);
+			this.active = this.active.concat(drawOne);
+			//testing logs
+			console.log('keepThree drew 1: '+drawOne);
+			//
+		}
+	}
+*/
+	addCard2Inventory(card:Card) {
+		this.inventory.push(card);
+	}
+
+	addCard2Deck(card:Card) {
+		this.deck.push(card);
 	}
 
 	addMoney(n:number) {
@@ -69,11 +108,11 @@ class Player {
 
 	buyPack(n:number) {
 		var x = n * 4;
-		if (this.inventory.inventory.length <= (50 - x) && this.money >= (100 * n)) {
+		if (this.inventory.length <= (50 - x) && this.money >= (100 * n)) {
 			this.money = this.money - (100 * n);
 			var tempPack = new Pack();
 			var draw = tempPack.pack.splice(0,3);
-			this.inventory.inventory = this.inventory.inventory.concat(draw);
+			this.inventory = this.inventory.concat(draw);
 			//testing logs
 			console.log(tempPack);
 			console.log(draw);

@@ -6,7 +6,7 @@ define(["require", "exports", '../src/Game'], function(require, exports, Game) {
                 $routeProvider.when('/src', {
                     templateUrl: '/src/game.html',
                     controller: Game,
-                    controllerAs: 'Game'
+                    controllerAs: 'game'
                 });
             });
             angular.bootstrap(document, ['launcher']);

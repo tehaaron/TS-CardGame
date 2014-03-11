@@ -1,9 +1,9 @@
-define(["require", "exports", '../src/Deck', '../src/Inventory', '../src/Pack', '../src/Card'], function(require, exports, Deck, Inventory, Pack, Card) {
+define(["require", "exports", '../src/Pack', '../src/Card'], function(require, exports, Pack, Card) {
     var Player = (function () {
         function Player(name, deck, inventory, money, actionPoints, organicMaterial, mechanicalParts) {
             this.name = name;
-            this.deck = deck;
-            this.inventory = inventory;
+            this.deck = [];
+            this.inventory = [];
             this.money = money;
             this.actionPoints = actionPoints;
             this.organicMaterial = organicMaterial;
@@ -19,6 +19,28 @@ define(["require", "exports", '../src/Deck', '../src/Inventory', '../src/Pack', 
 
                 console.log(this.actionPoints);
             }
+        };
+
+        Player.prototype.shuffle = function () {
+            var n = 8;
+            var i, j, k;
+            var temp;
+            for (i = 0; i < n; i += 1) {
+                for (j = 0; j < this.deck.length; j += 1) {
+                    k = Math.floor(Math.random() * this.deck.length);
+                    temp = this.deck[j];
+                    this.deck[j] = this.deck[k];
+                    this.deck[k] = temp;
+                }
+            }
+        };
+
+        Player.prototype.addCard2Inventory = function (card) {
+            this.inventory.push(card);
+        };
+
+        Player.prototype.addCard2Deck = function (card) {
+            this.deck.push(card);
         };
 
         Player.prototype.addMoney = function (n) {
@@ -55,11 +77,11 @@ define(["require", "exports", '../src/Deck', '../src/Inventory', '../src/Pack', 
 
         Player.prototype.buyPack = function (n) {
             var x = n * 4;
-            if (this.inventory.inventory.length <= (50 - x) && this.money >= (100 * n)) {
+            if (this.inventory.length <= (50 - x) && this.money >= (100 * n)) {
                 this.money = this.money - (100 * n);
                 var tempPack = new Pack();
                 var draw = tempPack.pack.splice(0, 3);
-                this.inventory.inventory = this.inventory.inventory.concat(draw);
+                this.inventory = this.inventory.concat(draw);
 
                 console.log(tempPack);
                 console.log(draw);

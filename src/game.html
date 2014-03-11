@@ -1,10 +1,7 @@
 	<div id="game">
 		<ul>
-			<li data-ng-repeat="Game.player.deck.deck[$index] in Game.player.deck.deck">
-				{{Game.player.deck.deck[$index].name}}
-			</li>
-			<li>
-				{{Game.player.deck.deck[0].name}} <!--just a test-->
+			<li ng-repeat="card in game.player.deck.slice(0,3) track by $index">
+				{{card.getHTML("$index")}}
 			</li>
 		</ul>
 	</div>

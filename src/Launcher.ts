@@ -15,7 +15,7 @@ export class Launcher {
                 $routeProvider.when('/src', {
                     templateUrl: '/src/game.html',
                     controller: Game,
-                    controllerAs: 'Game'
+                    controllerAs: 'game'
                 });
             }); 
         angular.bootstrap(document, ['launcher'])    
