@@ -18,7 +18,16 @@ define(["require", "exports", '../src/Pack', '../src/Card'], function(require, e
                 this.addActionPoints(1);
 
                 console.log(this.actionPoints);
+            } else if (n === 100) {
+                timer = null;
+
+                console.log("Done");
             }
+        };
+
+        Player.prototype.playCard = function ($index) {
+            var played = this.deck.splice($index, 1);
+            console.log("played " + $index);
         };
 
         Player.prototype.shuffle = function () {

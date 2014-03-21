@@ -6,12 +6,24 @@
 	color:white;
 }
 
+#playerCardsInPlay {
+	border: 4px solid Blue;
+	background-color: Lightgray;
+	padding:10px;
+	position: relative;
+	overflow: auto;
+}
+
 #playableCards {
 	border: 4px solid LightSlateGray;
 	background-color: Lightgray;
 	padding:10px;
 	position: relative;
 	overflow: auto;
+}
+
+#playableCards ul {
+	list-style: none;
 }
 
 .card {

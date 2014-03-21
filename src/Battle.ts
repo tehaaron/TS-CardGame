@@ -18,14 +18,15 @@ class Battle {
 		this.player = player;
 		this.enemy = enemy;
 		this.money = money;
-		this.inPlay = inPlay;
+		this.inPlay = [];
 		this.reward = reward;
 
 		this.enemy.shuffle();
 		this.player.shuffle();
-		this.fight();
+//		this.fight();
 	}
 
+/*
 	fight() {
 		//1. call playerTurn to select card
 		this.playerTurn(); //this doesnt work...done fires on page load...I am going it wrong
@@ -50,5 +51,5 @@ class Battle {
 			$("#playableCards").remove();
 		});
 	}
-
+*/
 } export = Battle;

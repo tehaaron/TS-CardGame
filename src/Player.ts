@@ -1,5 +1,6 @@
 import Pack = require('../src/Pack');
 import Card = require('../src/Card');
+import Battle = require('../src/Battle');
 
 class Player {
 	card:Card;
@@ -27,12 +28,21 @@ class Player {
 	perpetualActionPoints() {
 		var n = this.actionPoints
 			, timer = setInterval(this.perpetualActionPoints.bind(this), 60000);
-		 if (n < 100) {
+		if (n < 100) {
 			n += 1;
 			this.addActionPoints(1);
 
 			console.log(this.actionPoints); //testing log
+		} else if (n === 100) { //for testing to stop memory leak
+			timer = null;
+
+			console.log("Done"); 
 		}
+	}
+
+	playCard($index) {
+		var played = this.deck.splice($index, 1);
+		console.log("played "+$index);
 	}
 
 	shuffle() {

@@ -29,10 +29,6 @@ class Card {
 		this.abilities = [];
 	}
 
-	getHTML($sce:ng.ISCEService, cssID:string) {
-		return $sce.trustAsHtml("<div id='"+cssID+"' class='card playable "+this.image+"'><h3>"+this.name+"</h3></div>");
-	}
-
 	addAbility(ability:Ability) {
 		this.abilities.push(ability);
 	}

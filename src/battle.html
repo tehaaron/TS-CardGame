@@ -1,0 +1,20 @@
+	<div id="playableCards">	
+		<ul>
+			<li ng-repeat="card in game.player.deck.slice(0,3) track by $index">
+				<div id='{{$index}}' class='card playable {{card.image}}' ng-click="game.player.playCard($index)">
+					<h3>{{card.name}}</h3>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div id="table">
+		<div id="playerCardsInPlay">
+		<ul>
+			<li ng-repeat="card in game.battle.inPlay track by $index">
+				<div id='{{$index}}' class='card playable {{card.image}}'>
+					<h3>{{card.name}}</h3>
+				</div>				
+			</li>
+		</ul>
+		</div>
+	</div>

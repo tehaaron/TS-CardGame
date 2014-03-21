@@ -13,11 +13,11 @@ export class Launcher {
             function ($routeProvider: ng.route.IRouteProvider, $locationProvider: ng.ILocationProvider) {
                 $locationProvider.html5Mode(true);
                 $routeProvider.when('/src', {
-                    templateUrl: '/src/game.html',
+                    templateUrl: '/src/battle.html',
                     controller: Game,
                     controllerAs: 'game'
                 });
             }); 
-        angular.bootstrap(document, ['launcher'])    
+        angular.bootstrap(document, ['launcher']);  
     }
 }

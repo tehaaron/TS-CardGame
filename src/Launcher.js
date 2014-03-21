@@ -4,7 +4,7 @@ define(["require", "exports", '../src/Game'], function(require, exports, Game) {
             this.launcher = angular.module('launcher', ['ngRoute'], function ($routeProvider, $locationProvider) {
                 $locationProvider.html5Mode(true);
                 $routeProvider.when('/src', {
-                    templateUrl: '/src/game.html',
+                    templateUrl: '/src/battle.html',
                     controller: Game,
                     controllerAs: 'game'
                 });
