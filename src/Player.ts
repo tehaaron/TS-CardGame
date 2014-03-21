@@ -41,8 +41,7 @@ class Player {
 	}
 
 	playCard($index) {
-		var played = this.deck.splice($index, 1);
-		console.log("played "+$index);
+		return this.deck.splice($index, 1);
 	}
 
 	shuffle() {

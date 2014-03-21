@@ -12,6 +12,7 @@ class Game {
 
 	player:Player;
 	enemy:CommanderLlama;
+	battle:Battle;
 	$scope:ng.IScope;
 	$sce:ng.ISCEService;
 
@@ -37,8 +38,8 @@ class Game {
 
 		console.log(this.enemy);
 
-		var newBattle = new Battle($scope, $sce, this.player, this.enemy, 100, []);
+		this.battle = new Battle($scope, $sce, this.player, this.enemy, 100, []);
 
-		console.log(newBattle);
+		console.log(this.battle);
 	}
 } export = Game;

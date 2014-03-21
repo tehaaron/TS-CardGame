@@ -12,6 +12,10 @@ define(["require", "exports", '../src/Player', '../src/Card'], function(require,
             this.enemy.shuffle();
             this.player.shuffle();
         }
+        Battle.prototype.getPlayedCard = function ($index) {
+            var nextCard = this.player.playCard($index);
+            this.inPlay.push(nextCard);
+        };
         return Battle;
     })();
     

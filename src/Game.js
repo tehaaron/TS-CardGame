@@ -16,9 +16,9 @@ define(["require", "exports", '../src/Player', '../src/enemies/CommanderLlama', 
 
             console.log(this.enemy);
 
-            var newBattle = new Battle($scope, $sce, this.player, this.enemy, 100, []);
+            this.battle = new Battle($scope, $sce, this.player, this.enemy, 100, []);
 
-            console.log(newBattle);
+            console.log(this.battle);
         }
         return Game;
     })();

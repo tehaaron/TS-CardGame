@@ -26,8 +26,7 @@ define(["require", "exports", '../src/Pack', '../src/Card'], function(require, e
         };
 
         Player.prototype.playCard = function ($index) {
-            var played = this.deck.splice($index, 1);
-            console.log("played " + $index);
+            return this.deck.splice($index, 1);
         };
 
         Player.prototype.shuffle = function () {

@@ -26,6 +26,10 @@ class Battle {
 //		this.fight();
 	}
 
+	getPlayedCard($index) {
+		var nextCard:Card = this.player.playCard($index);
+		this.inPlay.push(nextCard);
+	}
 /*
 	fight() {
 		//1. call playerTurn to select card
