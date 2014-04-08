@@ -22,7 +22,7 @@ class Player {
 		this.organicMaterial = organicMaterial;
 		this.mechanicalParts = mechanicalParts;
 
-		this.perpetualActionPoints();
+//		this.perpetualActionPoints();
 	}
 
 	perpetualActionPoints() {

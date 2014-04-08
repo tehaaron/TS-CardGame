@@ -16,7 +16,7 @@ define(["require", "exports", '../src/Player', '../src/enemies/CommanderLlama', 
 
             console.log(this.enemy);
 
-            this.battle = new Battle($scope, $sce, this.player, this.enemy, 100, []);
+            this.battle = new Battle($scope, $sce, this.player, this.enemy, 100, [], [], true);
 
             console.log(this.battle);
         }

@@ -7,18 +7,22 @@ class Battle {
 	player:Player;
 	enemy:Enemy;
 	money:number;
-	inPlay:Card[];
+	inPlayPlayer1:Card[];
+	inPlayPlayer2:Card[];
+	playerTurn:boolean;
 	reward:Reward.Reward;
 	$scope:ng.IScope;
 	$sce:ng.ISCEService;
 
-	constructor($scope:ng.IScope, $sce:ng.ISCEService, player:Player, enemy:Enemy, money:number, inPlay:Card[], reward?:Reward.Reward) {
+	constructor($scope:ng.IScope, $sce:ng.ISCEService, player:Player, enemy:Enemy, money:number, inPlayPlayer1:Card[], inPlayPlayer2:Card[], playerTurn:boolean, reward?:Reward.Reward) {
 		this.$scope = $scope;
 		this.$sce = $sce;
 		this.player = player;
 		this.enemy = enemy;
 		this.money = money;
-		this.inPlay = [];
+		this.inPlayPlayer1 = [];
+		this.inPlayPlayer2 = [];
+		this.playerTurn = playerTurn;
 		this.reward = reward;
 
 		this.enemy.shuffle();
@@ -26,9 +30,27 @@ class Battle {
 //		this.fight();
 	}
 
+	cardManager() {
+		console.log("initiated");
+	}
+
 	getPlayedCard($index) {
-		var nextCard:Card = this.player.playCard($index);
-		this.inPlay.push(nextCard);
+		var start:number = 0;
+		var end:number = 1;
+			if (this.playerTurn == true) {
+				var nextCard:Card[] = this.player.playCard($index);
+				this.inPlayPlayer1 = this.inPlayPlayer1.concat(nextCard);
+				console.log(this.inPlayPlayer1);
+				this.playerTurn = false;
+			} else if (this.playerTurn == false) {
+				console.log(start+","+end);
+				var nextCard:Card[] = this.enemy.deck.slice(start,end);
+				this.inPlayPlayer2 = this.inPlayPlayer2.concat(nextCard);
+				console.log(this.inPlayPlayer2);
+				this.playerTurn = true;
+				start+=1;
+				end+=1;
+			}
 	}
 /*
 	fight() {
@@ -49,7 +71,7 @@ class Battle {
 		$("#playableCards").append(this.player.deck[0].getHTML(this.$sce,"0"), this.player.deck[1].getHTML(this.$sce,"1"), this.player.deck[2].getHTML(this.$sce,"2"));
 		$("div.playable").on("click", (event:any) => {
 			var play = this.player.deck.splice(+event.target.id, 1);
-			this.inPlay.push(play[0]);
+			this.inPlayPlayer1.push(play[0]);
 			$(event.target).removeClass("playable");
 			$(event.target).remove();
 			$("#playableCards").remove();

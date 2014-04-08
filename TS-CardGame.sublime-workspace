@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"in",
+				"inPlayPlayer2"
+			],
+			[
+				"InPlay",
+				"InPlayPlayer2"
+			],
+			[
+				"player",
+				"playerTurn"
+			],
+			[
 				"tye",
 				"typeof"
 			],
@@ -240,60 +252,19 @@
 	"buffers":
 	[
 		{
-			"file": "src/Battle.ts",
+			"file": "src/CardManagerDirectives.ts",
 			"settings":
 			{
-				"buffer_size": 1543,
+				"buffer_size": 376,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/Game.ts",
+			"file": "src/directive-test.html",
 			"settings":
 			{
-				"buffer_size": 1647,
+				"buffer_size": 47,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/Player.ts",
-			"settings":
-			{
-				"buffer_size": 1924,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/Deck.ts",
-			"settings":
-			{
-				"buffer_size": 1030,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/index.html",
-			"settings":
-			{
-				"buffer_size": 301,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/Card.ts",
-			"settings":
-			{
-				"buffer_size": 1129,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/css/styles.css",
-			"settings":
-			{
-				"buffer_size": 418,
-				"line_ending": "Windows",
-				"name": "#playableCards {"
 			}
 		}
 	],
@@ -353,15 +324,30 @@
 	},
 	"file_history":
 	[
+		"/C/Users/aselvig/Dropbox/Web Development/Learning Stuff/TS-CardGame/src/Battle.ts",
+		"/C/Users/aselvig/Dropbox/Web Development/Learning Stuff/TS-CardGame/src/enemies/CommanderLlama.ts",
+		"/C/Users/aselvig/Dropbox/Web Development/Learning Stuff/TS-CardGame/src/css/styles.css",
+		"/C/Users/aselvig/Dropbox/Web Development/Learning Stuff/TS-CardGame/src/Game.ts",
+		"/C/Users/aselvig/Dropbox/Web Development/Learning Stuff/TS-CardGame/src/Player.ts",
+		"/C/Users/aselvig/Dropbox/Web Development/Learning Stuff/TS-CardGame/src/battle.html",
+		"/C/Users/aselvig/Dropbox/Web Development/Learning Stuff/TS-CardGame/src/Launcher.ts",
+		"/C/Users/Aaron/Dropbox/Web Development/Learning Stuff/TS-CardGame/src/Battle.js",
+		"/C/Users/Aaron/Dropbox/Web Development/Learning Stuff/TS-CardGame/src/Launcher.ts",
+		"/C/Users/Aaron/Dropbox/Web Development/Learning Stuff/TS-CardGame/src/game.html",
+		"/C/Users/Aaron/Dropbox/Web Development/Learning Stuff/TS-CardGame/src/battle.html",
+		"/C/Users/Aaron/Dropbox/Web Development/Learning Stuff/TS-CardGame/src/Battle.ts",
+		"/C/Users/Aaron/Dropbox/Web Development/Learning Stuff/TS-CardGame/src/Game.ts",
+		"/C/Users/Aaron/Dropbox/Web Development/Learning Stuff/TS-CardGame/src/Player.ts",
+		"/C/Users/Aaron/Dropbox/Web Development/Learning Stuff/TS-CardGame/src/index.html",
+		"/C/Users/Aaron/Dropbox/Web Development/Learning Stuff/TS-CardGame/src/Card.ts",
+		"/C/Users/Aaron/Dropbox/Web Development/Learning Stuff/TS-CardGame/src/css/styles.css",
+		"/C/Users/Aaron/Dropbox/Web Development/Learning Stuff/TS-CardGame/src/Deck.ts",
 		"/C/Users/aselvig/Dropbox/Web Development/Learning Stuff/TS-CardGame/src/Battle.js",
 		"/C/Users/aselvig/Dropbox/Web Development/Learning Stuff/TS-CardGame/src/cards/Marine.ts",
 		"/C/Users/aselvig/Dropbox/Web Development/Learning Stuff/TS-CardGame/src/cards/NoviceSniper.ts",
 		"/C/Users/aselvig/Dropbox/Web Development/Learning Stuff/TS-CardGame/src/CardRarity.js",
 		"/C/Users/aselvig/Dropbox/Web Development/Learning Stuff/TS-CardGame/src/Deck.ts",
-		"/C/Users/aselvig/Dropbox/Web Development/Learning Stuff/TS-CardGame/src/Player.ts",
 		"/C/Users/aselvig/Dropbox/Web Development/Learning Stuff/TS-CardGame/src/Enemy.ts",
-		"/C/Users/aselvig/Dropbox/Web Development/Learning Stuff/TS-CardGame/src/enemies/CommanderLlama.ts",
-		"/C/Users/aselvig/Dropbox/Web Development/Learning Stuff/TS-CardGame/src/Game.ts",
 		"/C/Users/aselvig/Dropbox/Web Development/Learning Stuff/TS-CardGame/src/Inventory.ts",
 		"/C/Users/aselvig/Dropbox/Web Development/Learning Stuff/TS-CardGame/src/Ability.ts",
 		"/C/Users/aselvig/Dropbox/Web Development/Learning Stuff/TS-CardGame/src/abilities/Snipe.ts",
@@ -378,7 +364,6 @@
 		"/C/Users/aselvig/Dropbox/Web Development/Learning Stuff/TS-CardGame/src/CardRace.ts",
 		"/C/Users/aselvig/Dropbox/Web Development/Learning Stuff/TS-CardGame/src/Reward.ts",
 		"/C/Users/aselvig/Dropbox/Web Development/Learning Stuff/TS-CardGame/src/main.ts",
-		"/C/Users/aselvig/Dropbox/Web Development/Learning Stuff/TS-CardGame/src/Battle.ts",
 		"/C/Users/aselvig/Dropbox/Web Development/Learning Stuff/TS-CardGame/src/index.html",
 		"/C/Users/aselvig/Dropbox/Web Development/Learning Stuff/TS-CardGame/src/lib/source/require.d.ts",
 		"/C/Users/aselvig/Dropbox/Web Development/Learning Stuff/TS-CardGame/src/lib/source/jquery.d.ts",
@@ -446,6 +431,10 @@
 		"height": 90.0,
 		"where_history":
 		[
+			"C:\\Users\\Aaron\\Dropbox\\Web Development\\Learning Stuff\\TS-CardGame\\src,-*.js",
+			"C:\\Users\\Aaron\\Dropbox\\Web Development\\Learning Stuff\\TS-CardGame\\src",
+			"C:\\Users\\aselvig\\Dropbox\\Web Development\\Learning Stuff\\TS-CardGame",
+			"C:\\Users\\aselvig\\Dropbox\\Web Development\\Learning Stuff\\TS-CardGame\\",
 			"C:\\Users\\aselvig\\Dropbox\\Web Development\\Learning Stuff\\AngularJS"
 		]
 	},
@@ -454,6 +443,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"InPlayPlayer",
+			"inPlay",
 			"active",
 			"cards",
 			"this",
@@ -509,6 +500,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"inPlayPlayer",
+			"InPlayPlayer1",
 			".test.u",
 			".test .u",
 			".test.u",
@@ -531,24 +524,25 @@
 			[
 				{
 					"buffer": 0,
-					"file": "src/Battle.ts",
+					"file": "src/CardManagerDirectives.ts",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1543,
+						"buffer_size": 376,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								222,
-								222
+								376,
+								376
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
+							"auto_name": "",
 							"extensions":
 							[
 								"ts"
@@ -556,7 +550,7 @@
 							"syntax": "Packages/Better TypeScript/TypeScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": -0.0,
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -565,106 +559,19 @@
 				},
 				{
 					"buffer": 1,
-					"file": "src/Game.ts",
+					"file": "src/directive-test.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1647,
+						"buffer_size": 47,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1598,
-								1598
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Better TypeScript/TypeScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/Player.ts",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1924,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Better TypeScript/TypeScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/Deck.ts",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1030,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								82,
-								82
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Better TypeScript/TypeScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "src/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 301,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								228,
-								228
+								47,
+								47
 							]
 						],
 						"settings":
@@ -675,65 +582,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "src/Card.ts",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1129,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								339,
-								339
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Better TypeScript/TypeScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "src/css/styles.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 418,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								416,
-								416
-							]
-						],
-						"settings":
-						{
-							"auto_name": "#playableCards {",
-							"syntax": "Packages/CSS/CSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]

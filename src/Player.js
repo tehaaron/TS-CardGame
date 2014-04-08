@@ -8,8 +8,6 @@ define(["require", "exports", '../src/Pack', '../src/Card'], function(require, e
             this.actionPoints = actionPoints;
             this.organicMaterial = organicMaterial;
             this.mechanicalParts = mechanicalParts;
-
-            this.perpetualActionPoints();
         }
         Player.prototype.perpetualActionPoints = function () {
             var n = this.actionPoints, timer = setInterval(this.perpetualActionPoints.bind(this), 60000);
